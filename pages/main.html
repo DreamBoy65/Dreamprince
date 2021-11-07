@@ -1,0 +1,232 @@
+<html>
+  <body id = "body">
+    <title>Dream-Web</title>
+     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'><link rel="stylesheet" href="./style.css">
+    
+    <div class="id">
+    <head><h3>Dream-Boy</h3></head>
+      <p>Hello!</br>
+      I'm dream Boy a normal kid. I love to make new friends, code bots. etc.</p>
+    </div>
+
+      
+    </br></br></br></br>
+
+    
+    <div class="friends">
+      <h3>My Friend List</h3>
+
+      <h7>1# Haruke </br> My only beastie he is nice but very unholy LoL</h7> </br></br>
+      <h7>2# cool </br> One of my online friends ppl call him cooler to tease him </h7> </br></br>
+      <h7>3# Winking </br> she is my witch An online best friend.</h7>
+      </br></br>
+      <h7>4# Clariet </br>A bindass girl . ppl call him mummy .</h7>
+      
+    </div>
+
+    <div class="l-navbar" id="navbar">
+      <div class=".nav">
+        <!-- Logo+Text -->
+        <a href="#" class="nav-logo-container">
+          <i class='bx bxs-polygon logo-icon'></i>
+          <span class="logo-text">Prince.</span>
+        </a>
+        <!-- Toggle -->
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="bx bx-chevron-right"></i>
+        </div>
+        <!-- List -->
+        <ul class="nav-list">
+          <a href="https://discord.gg/4GuucWTwxH" class="nav-link active">
+            <i class="bx bxl-discord-alt icon"></i>
+            <span class="link-text">Discord</span>
+          </a>
+
+          <a href="https://instagram.com/anime__boy_0?utm_medium=copy_link" class="nav-link">
+            <i class="bx bxl-instagram-alt icon"></i>
+            <span class="link-text">Instagram</span>
+          </a>
+
+          <a href="https://github.com/dreamboy65" class="nav-link">
+            <i class="bx bxl-github icon"></i>
+            <span class="link-text">Github</span>
+          </a>
+
+          <a href="https://twitter.com/Dark__boy_0?s=09" class="nav-link">
+            <i class="bx bx-chat icon"></i>
+            <span class="link-text">Twitter</span>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <link href="./style.css" rel="stylesheet">
+  <script src="./script.js"></script>
+  </body>
+
+<script>
+  // SHOW MENU
+const showMenu = (toggleId, navbarId, bodyId) => {
+  const toggle = document.getElementById(toggleId),
+    navbar = document.getElementById(navbarId),
+    bodypadding = document.getElementById(bodyId);
+
+  if (toggle && navbar) {
+    toggle.addEventListener("click", () => {
+      // APARECER MENU
+      navbar.classList.toggle("show");
+      // ROTATE TOGGLE
+      toggle.classList.toggle("rotate");
+      // PADDING BODY
+      bodypadding.classList.toggle("expander");
+    });
+  }
+};
+showMenu("nav-toggle", "navbar", "body");
+
+// Change active link when clicked
+const linkColor = document.querySelectorAll(".nav-link");
+function colorLink() {
+  linkColor.forEach((l) => l.classList.remove("active"));
+  this.classList.add("active");
+}
+
+linkColor.forEach((l) => l.addEventListener("click", colorLink));
+</script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+:root {
+  --first-color: #12192c;
+  --second-color: #f5a623;
+  --white-color: #ededed;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-image: url("https://media.discordapp.net/attachments/785418189294010409/899335503239847966/0e19c1ae0f6bc24427708f9ac66bd593.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p {
+  color: 890000;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+.friends {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  padding: 1rem 0 0 5rem;
+  transition: 0.5s;
+}
+/*  To be used to increse the padding of body when toggling sidebar*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  transition: 0.5s;
+}
+
+.l-navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--first-color);
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  padding: 1.25rem 0.5rem 2rem;
+  transition: 0.5s;
+
+}
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+/* Logo+Text CSS */
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+  overflow:hidden;
+}
+.logo-icon {
+  margin-right: 1.5rem;
+  font-size:1.5rem;
+  color:white;
+}
+.logo-text {
+  color: white;
+  font-weight: 700;
+}
+
+/* Toggle Button */
+.nav-toggle {
+  position: absolute;
+  top: 1.4rem;
+  right: -0.5rem;
+  width: 18px;
+  height: 18px;
+  background-color: #f5a623;
+  border-radius: 50%;
+  color: var(--first-color);
+  cursor: pointer;
+  transform: all 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+  overflow:hidden;
+}
+.nav-link:hover {
+  background-color: #f5a623;
+}
+.link-text {
+  margin-left: 1.5rem;
+  font-weight: 700;
+}
+.active {
+  background-color: var(--second-color);
+}
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.show {
+  width: 170px;
+}
+.icon {
+  font-size: 1.5rem;
+}
+  </style>
+</html>
